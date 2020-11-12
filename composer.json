@@ -2,6 +2,7 @@
     "name": "windbridges/browser-server-client",
     "description": "Browser Server API Client",
     "type": "library",
+    "license": "MIT",
     "authors": [
         {
             "name": "alex",
