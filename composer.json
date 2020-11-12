@@ -1,0 +1,20 @@
+{
+    "name": "windbridges/browser-server-client",
+    "type": "library",
+    "authors": [
+        {
+            "name": "alex",
+            "email": "windbridges@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.2",
+      "ext-json": "*",
+        "chrome-php/chrome": "^0.8.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "WindBridges\\BrowserServerClient\\": "src/"
+        }
+    }
+}
