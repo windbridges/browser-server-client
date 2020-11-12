@@ -1,5 +1,6 @@
 {
     "name": "windbridges/browser-server-client",
+    "description": "Browser Server API Client",
     "type": "library",
     "authors": [
         {
@@ -8,8 +9,9 @@
         }
     ],
     "require": {
+        "php": "^7.3",
         "guzzlehttp/guzzle": "^7.2",
-      "ext-json": "*",
+        "ext-json": "*",
         "chrome-php/chrome": "^0.8.1"
     },
     "autoload": {
