@@ -3,7 +3,6 @@
     "description": "Browser Server API Client",
     "type": "library",
     "license": "MIT",
-    "version": "0.1",
     "minimum-stability": "dev",
     "authors": [
         {
