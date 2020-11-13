@@ -38,7 +38,8 @@ class BrowserServerClient
 
     public function startSession(SessionOptions $options = null): Session
     {
-        $response = $this->client->get('/api/session/start');
+        $options = $options ?: new SessionOptions();
+        $response = $this->client->get('/api/session/start', ['json' => $options->toArray()]);
         $data = json_decode($response->getBody()->getContents(), true);
 
         return new Session($this->client, $data['socketUri'], $data['name']);
@@ -46,7 +47,8 @@ class BrowserServerClient
 
     public function requireSession(string $name, SessionOptions $options = null): Session
     {
-        $response = $this->client->get('/api/session/require/' . urlencode($name));
+        $options = $options ?: new SessionOptions();
+        $response = $this->client->get('/api/session/require/' . urlencode($name), ['json' => $options->toArray()]);
         $data = json_decode($response->getBody()->getContents(), true);
 
         return new Session($this->client, $data['socketUri'], $data['name']);
