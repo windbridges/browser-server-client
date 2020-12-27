@@ -8,6 +8,7 @@ class SessionOptions
     protected $windowSize = [1200, 900];
     protected $enableImages = true;
     protected $ignoreCertificateErrors = true;
+    protected $proxy;
     /**
      * @var string|null Overrides user agent string for all pages of browser instance
      */
@@ -20,6 +21,7 @@ class SessionOptions
             'enableImages' => $this->enableImages,
             'ignoreCertificateErrors' => $this->ignoreCertificateErrors,
             'userAgent' => $this->userAgent,
+            'proxy' => $this->proxy
         ];
     }
 
@@ -87,4 +89,13 @@ class SessionOptions
         $this->userAgent = $userAgent;
     }
 
+    public function getProxy(): string
+    {
+        return $this->proxy;
+    }
+
+    public function setProxy(string $proxy): void
+    {
+        $this->proxy = $proxy;
+    }
 }
